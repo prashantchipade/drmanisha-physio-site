@@ -10,10 +10,19 @@
 <header id="header"></header>
 
 <script>
+  // Load header
   fetch('header.html')
     .then(response => response.text())
     .then(data => {
       document.getElementById('header').innerHTML = data;
+
+      // Now attach hamburger menu functionality
+      const hamb = document.getElementById('hamb');
+      const nav = document.getElementById('mainNav');
+
+      hamb.addEventListener('click', () => {
+        nav.classList.toggle('open'); // toggles 'open' class to show/hide menu
+      });
     });
 </script>
 
