@@ -7,24 +7,32 @@
 </head>
 <body>
 
-<header id="header"></header>
+<header id="header">
 
-<script>
-  // Load header
-  fetch('header.html')
-    .then(response => response.text())
-    .then(data => {
-      document.getElementById('header').innerHTML = data;
 
-      // Now attach hamburger menu functionality
-      const hamb = document.getElementById('hamb');
-      const nav = document.getElementById('mainNav');
+<div class="container header-inner">
+  <div class="brand">
+    <div class="logo"><img src="assets/logo.png" alt="logo" style="width:100%;height:100%;object-fit:cover"></div>
+    <div>
+      <h1>Dr Manisha's Physiotherapy</h1>
+      <div style="font-size:13px;color:var(--muted)">Your Pain-Free Life Starts Here</div>
+    </div>
+  </div>
+  <nav id="mainNav">
+    <a href="index.html">Home</a>
+	<a href="about.html">About Us</a>
+    <a href="services.html">Services</a>
+    <a href="testimonials.html">Testimonials</a>
+	<a href="gallery.html">Gallery</a>
+    <a href="faqs.html">FAQs</a>
+    <a href="contact.html" class="cta">Book</a>
+  </nav>
+  <button id="hamb" class="hamb" aria-label="Open menu">☰</button>
+</div>
 
-      hamb.addEventListener('click', () => {
-        nav.classList.toggle('open'); // toggles 'open' class to show/hide menu
-      });
-    });
-</script>
+</header>
+
+
 
 
 
