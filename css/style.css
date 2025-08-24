@@ -53,3 +53,89 @@ nav a:hover{color:var(--dark);background:#f1fbf6}
   }
 }
 
+
+
+.hero-card {
+  position: relative;
+  width: 100%;
+	height: 100%;
+
+	
+  max-width: 1200px;
+  margin: auto;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+
+.hero-banner {
+  position: relative;
+  width: 100%;
+	height: 100%;
+	  height: 15vh;
+
+
+	max-height: 2500x;
+  max-width: 1200px;
+  margin: auto;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.slideshow-container {
+  position: relative;
+  width: 100%;
+  height: 60vh;
+  min-height: 300px;
+}
+
+.slide {
+  display: none;  /* hidden by default */
+  width: 100%;
+  height: 100%;
+}
+
+.slide img {
+  width: 100%;
+  height: 15vh;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.fade {
+  animation: fade 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* Arrows */
+.prev, .next {
+  position: absolute;
+  top: 50%;
+  padding: 12px;
+  color: white;
+  font-weight: bold;
+  font-size: 24px;
+  cursor: pointer;
+  border-radius: 50%;
+  background-color: rgba(0,0,0,0.4);
+  transform: translateY(-50%);
+  z-index: 10;
+}
+
+.prev { left: 10px; }
+.next { right: 10px; }
+
+.prev:hover, .next:hover { background-color: rgba(0,0,0,0.7); }
+
+@media(max-width: 768px) {
+  .slideshow-container { height: 40vh; }
+}
+
+@media(max-width: 480px) {
+  .slideshow-container { height: 30vh; }
+  .prev, .next { font-size: 18px; padding: 8px; }
+}
