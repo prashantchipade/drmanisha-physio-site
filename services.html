@@ -10,10 +10,19 @@
 <header id="header"></header>
 
 <script>
+  // Load header
   fetch('header.html')
     .then(response => response.text())
     .then(data => {
       document.getElementById('header').innerHTML = data;
+
+      // Now attach hamburger menu functionality
+      const hamb = document.getElementById('hamb');
+      const nav = document.getElementById('mainNav');
+
+      hamb.addEventListener('click', () => {
+        nav.classList.toggle('open'); // toggles 'open' class to show/hide menu
+      });
     });
 </script>
 
@@ -21,14 +30,33 @@
 <main class='container'>
 
 <h1>Our Services</h1>
-<p class='lead'>Comprehensive physiotherapy services. Replace placeholders with full descriptions.</p>
 <div class='services-grid' style='margin-top:18px'>
-  <div class='card'><h3>Back & Neck Pain Relief</h3><p class='muted'>Assessment, manual therapy, exercise programs.</p></div>
+
+
+
+  <div class='card'><h3>Back & Neck Pain Relief</h3><p class='muted'>Common reasons for back & neck pain include muscle strain, disk damage, and some chronic conditions, such as fractures due to osteoporosis.</p></div>
+  <div class='card'><h3>Knee Pain</h3><p class='muted'>Knee pain may be the result of an injury, such as a ruptured ligament or torn cartilage. Medical conditions — including arthritis, gout and infections — also can cause knee pain..</p></div>
+  <div class='card'><h3>Shoulder Pain</h3><p class='muted'>Shoulder problems can cause a variety of symptoms, including pain, weakness, and limited movement. The location and type of pain can help a doctor diagnose the issue</p></div>  
+  
+  <div class='card'><h3>Joint Pain & Arthritis Care</h3><p class='muted'>Arthritis is a general term for joint pain and inflammation, affecting one or more joints and causing pain, stiffness, and reduced movement. It can be caused by various factors, including wear and tear, autoimmune conditions, and infections, leading to a wide range of symptoms.</p></div>
+  <div class='card'><h3>Geriatric Physiotherapy</h3><p class='muted'>Geriatric physiotherapy is a specialized area of physical therapy focused on the unique needs of older adults, aiming to maintain and improve their mobility, strength, and overall function. It addresses age-related changes in the body, such as muscle weakness, joint stiffness, and balance problems..</p></div>
+
+  <div class='card'><h3>Foot & Ankle Pain</h3><p class='muted'>Foot and ankle pain can stem from various factors, including injuries, arthritis, overuse, and underlying medical conditions. Common causes include sprains, strains, Achilles tendonitis, plantar fasciitis, and flat feet. Seeking medical attention is recommended if pain persists, worsens..</p></div>
+  
+  
+  <div class='card'><h3>Spinal Injuries</h3><p class='muted'>Spinal cord injuries can result from trauma, such as accidents or falls, or from non-traumatic causes like tumors or infections. These injuries can range in severity, causing a variety of symptoms including pain, weakness, loss of sensation, and even paralysis.</p></div>
+  <div class='card'><h3>Bell's palsy</h3><p class='muted'></p>Bell’s palsy temporarily weakens or paralyzes facial muscles. People with Bell’s palsy develop a droopy appearance on one — or sometimes both — sides of their face.</div>
+  <div class='card'><h3>Vertigo Management</h3><p class='muted'>Physiotherapy plays a crucial role in treating vertigo, particularly for conditions like Benign Paroxysmal Positional Vertigo (BPPV). It involves repositioning exercises, such as the Epley maneuver, and vestibular rehabilitation programs to improve balance, gaze stability, and reduce dizziness</p></div>
+  
+  <div class='card'><h3>Postural Correction & Ergonomics</h3><p class='muted'>Desk job programs and posture retraining.</p></div>
   <div class='card'><h3>Post-Surgery Rehabilitation</h3><p class='muted'>Progressive strengthening and mobility protocols.</p></div>
   <div class='card'><h3>Sports Injury Management</h3><p class='muted'>Injury assessment, taping, return-to-sport.</p></div>
-  <div class='card'><h3>Neurological Physiotherapy</h3><p class='muted'>Stroke rehab, neuropathy management.</p></div>
-  <div class='card'><h3>Joint Pain & Arthritis Care</h3><p class='muted'>OA management and strengthening.</p></div>
-  <div class='card'><h3>Postural Correction & Ergonomics</h3><p class='muted'>Desk job programs and posture retraining.</p></div>
+  
+  <div class='card'><h3>Hi Pain</h3><p class='muted'>Hip pain is a common symptom that can be caused by anything from sports injuries to arthritis. if the pain persists or gets worse, other treatments may be necessary.</p></div>
+  
+  
+  
+  
 </div>
 
 </main>
