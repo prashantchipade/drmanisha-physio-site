@@ -10,25 +10,6 @@
 <header id="header"></header>
 
 <script>
-  // Load header
-  fetch('header.html')
-    .then(response => response.text())
-    .then(data => {
-      document.getElementById('header').innerHTML = data;
-
-      // Now attach hamburger menu functionality
-      const hamb = document.getElementById('hamb');
-      const nav = document.getElementById('mainNav');
-
-      hamb.addEventListener('click', () => {
-        nav.classList.toggle('open'); // toggles 'open' class to show/hide menu
-      });
-    });
-	
-	
-	
-	
-
 	let slideIndex = 0;
 	let slides = document.getElementsByClassName("slide");
 
@@ -80,7 +61,9 @@
     <h2>Move better. Hurt less.</h2>
     <p class='lead'>Evidence-based physiotherapy, hands-on treatment and tailored exercise programs to get you back to what you love.</p>
     <div style='margin-top:18px'>
-      <a href='/contact.html' class='btn'>Book Appointment</a>
+      
+	  <a class='btn ghost' href='tel:+919881912065' target='_blank' style='margin-left:10px'>Call Clinic</a>
+	  
       <a class='btn ghost' href='https://wa.me/919881912065' target='_blank' style='margin-left:10px'>WhatsApp</a>
     </div>
     <div class='services-grid' style='margin-top:28px'>

@@ -5,37 +5,44 @@
 <title>Dr Manisha - Site</title>
 <link rel='stylesheet' href='css/style.css'>
 </head>
+
+
+
 <body>
+
+
 
 <header id="header"></header>
 
-<script>
-  // Load header
-  fetch('header.html')
-    .then(response => response.text())
-    .then(data => {
-      document.getElementById('header').innerHTML = data;
-
-      // Now attach hamburger menu functionality
-      const hamb = document.getElementById('hamb');
-      const nav = document.getElementById('mainNav');
-
-      hamb.addEventListener('click', () => {
-        nav.classList.toggle('open'); // toggles 'open' class to show/hide menu
-      });
-    });
-</script>
 
 
 <main class='container'>
 
 <h1>Patient Stories</h1>
-<p class='lead'>Real patient experiences. Replace with consented testimonials.</p>
+
+<!--
+<p class='lead'>Real patient experiences.</p>
+
+
 <div class='grid-3' style='margin-top:18px'>
   <div class='testimonial'><strong>Rahul</strong><p style='margin-top:8px'>"Back pain reduced from 8/10 to 2/10 within 4 sessions."</p></div>
   <div class='testimonial'><strong>Meera</strong><p style='margin-top:8px'>"Post-knee surgery rehab helped me walk confidently again."</p></div>
   <div class='testimonial'><strong>Arjun</strong><p style='margin-top:8px'>"No more neck headaches after posture program."</p></div>
 </div>
+-->
+
+
+<!-- Elfsight All-in-One Reviews | Untitled All-in-One Reviews -->
+<script src="https://elfsightcdn.com/platform.js" async></script>
+<div class="elfsight-app-de093d02-bffe-4015-803d-04721bf2669a" data-elfsight-app-lazy></div>
+
+
+
+
+
+
+
+
 
 </main>
 <footer class='footer'>© 2025 Dr Manisha's Physiotherapy</footer>

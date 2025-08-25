@@ -1,4 +1,20 @@
 
+  // Load header
+  fetch('header.html')
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById('header').innerHTML = data;
+
+      // Now attach hamburger menu functionality
+      const hamb = document.getElementById('hamb');
+      const nav = document.getElementById('mainNav');
+
+      hamb.addEventListener('click', () => {
+        nav.classList.toggle('open'); // toggles 'open' class to show/hide menu
+      });
+    });
+
+
 // Mobile menu toggle
 document.addEventListener('DOMContentLoaded', function(){
   const hamb = document.getElementById('hamb');
@@ -69,35 +85,4 @@ document.addEventListener('DOMContentLoaded', function(){
 });
 
 
-<script>
-let slideIndex = 0;
-showSlides();
 
-// Auto slideshow
-function showSlides() {
-  let slides = document.getElementsByClassName("slide");
-  for (let i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
-  }
-  slideIndex++;
-  if (slideIndex > slides.length) { slideIndex = 1; }
-  slides[slideIndex-1].style.display = "block";
-  setTimeout(showSlides, 4000); // Change slide every 4 seconds
-}
-
-// Manual navigation
-const prev = document.querySelector(".prev");
-const next = document.querySelector(".next");
-
-prev.addEventListener("click", () => plusSlides(-1));
-next.addEventListener("click", () => plusSlides(1));
-
-function plusSlides(n) {
-  let slides = document.getElementsByClassName("slide");
-  slides[slideIndex-1].style.display = "none";
-  slideIndex += n;
-  if (slideIndex > slides.length) slideIndex = 1;
-  if (slideIndex < 1) slideIndex = slides.length;
-  slides[slideIndex-1].style.display = "block";
-}
-</script>
