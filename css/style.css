@@ -28,6 +28,7 @@ nav a:hover{color:var(--dark);background:#f1fbf6}
 .hero .hero-card{background:var(--card);padding:18px;border-radius:16px;box-shadow:0 12px 40px rgba(2,132,199,0.04);border:1px solid #eef8f4}
 .btn{display:inline-block;padding:10px 14px;border-radius:12px;background:var(--primary);color:#fff;text-decoration:none;font-weight:700}
 .btn.ghost{background:#fff;color:var(--primary);border:1px solid #e6f3ee}
+.lnk-std{background:#fff;color:var(--primary);border:1px solid #e6f3ee}
 .services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:18px}
 .card{background:var(--card);border-radius:12px;padding:18px;border:1px solid #eef7f3;box-shadow:0 8px 30px rgba(2,132,199,0.04)}
 .two-col{display:grid;grid-template-columns:1fr 360px;gap:24px;align-items:start;margin-top:28px}
@@ -175,7 +176,21 @@ nav a:hover{color:var(--dark);background:#f1fbf6}
 }
 .gallery-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(2, 1fr);
     gap: 16px;
     margin-top: 18px;
 }
+
+@media (max-width: 768px) {
+    .gallery-grid {
+        grid-template-columns: 1fr; /* Switch to single column */
+    }
+}
+a {
+    text-decoration: none;
+}
+
+
+
+
+

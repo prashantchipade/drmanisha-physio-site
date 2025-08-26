@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang='en'>
+<head>
+<meta charset='utf-8'><meta name='viewport' content='width=device-width,initial-scale=1'>
+<title>Dr Manisha's Physiotherapy</title>
+<link rel='stylesheet' href='css/style.css'>
+</head>
+<body>
+
+
+
+<header id="header"></header>
+
+
+
+
+<main class='container'>
+
+<a class='btn ghost' href='gallery.html'  >Back to Gallery</a>
+<h1>Wellness Posters</h1>
+
+<div id="gallery" class="gallery-grid"></div>
+
+<div id="gallery" class="gallery-grid"></div>
+
+<!-- Lightbox container -->
+<div id="lightbox" class="lightbox">
+  <span class="close">&times;</span>
+  <img class="lightbox-content" id="lightbox-img">
+</div>
+
+<script>
+const images = [
+  'w1.png', 'w2.png', 'w3.png', 'w4.png', 'w5.png', 'w6.png',
+  'w13.png', 'w8.png', 'w9.png', 'w10.png', 'w11.png', 'w12.png',
+  'w14.png', 'w15.png', 'w16.png', 'w17.png', 'w18.png', 'w19.png',
+  'w20.png', 'w21.png', 'w22.png', 'w23.png', 'w24.png', 'w25.png',
+  'w26.png', 'w27.png', 'w28.png', 'w29.png', 'w30.png', 'w31.png',
+  'w32.png', 'w33.png', 'w34.png', 'w35.png', 'w36.png', 'w37.png',
+  'w38.png', 'w39.png', 'w40.png'
+];
+
+const gallery = document.getElementById('gallery');
+const lightbox = document.getElementById('lightbox');
+const lightboxImg = document.getElementById('lightbox-img');
+const closeBtn = document.querySelector('.close');
+
+// Generate gallery images
+images.forEach(img => {
+  const imgElement = document.createElement('img');
+  imgElement.src = `assets/gallery/wellmess/${img}`;
+  imgElement.alt = img;
+  imgElement.classList.add('gallery-img');
+
+  // Add click event for lightbox
+  imgElement.addEventListener('click', () => {
+    lightbox.style.display = 'flex';
+    lightboxImg.src = imgElement.src;
+  });
+
+  gallery.appendChild(imgElement);
+});
+
+// Close lightbox
+closeBtn.addEventListener('click', () => {
+  lightbox.style.display = 'none';
+});
+
+// Close on outside click
+lightbox.addEventListener('click', (e) => {
+  if (e.target === lightbox) {
+    lightbox.style.display = 'none';
+  }
+});
+</script>
+
+<style>
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 12px;
+}
+
+.gallery-grid img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: transform 0.3s;
+}
+
+.gallery-grid img:hover {
+  transform: scale(1.05);
+}
+
+/* Lightbox styles */
+.lightbox {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  justify-content: center;
+  align-items: center;
+}
+
+.lightbox-content {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 8px;
+}
+
+.close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  color: #fff;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+}
+</style>
+
+
+<!--
+
+<script>
+const images = [
+  'w1.png', 'w2.png', 'w3.png', 'w4.png', 'w3.png', 'w4.png'
+];
+
+const gallery = document.getElementById('gallery');
+
+images.forEach(img => {
+  const imgElement = document.createElement('img');
+  imgElement.src = `assets/gallery/wellmess/${img}`;
+  imgElement.alt = img;
+  gallery.appendChild(imgElement);
+});
+</script>
+
+
+
+
+
+
+<style>
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 12px;
+}
+
+.gallery-grid img {
+  width: 100%;
+  height: 200px; /* fixed height */
+  object-fit: cover; /* maintain aspect ratio, crop if needed */
+  border-radius: 8px; /* optional */
+}
+</style>
+
+-->
+</main>
+<footer class='footer'>© 2025 Dr Manisha's Physiotherapy</footer>
+<script src='js/script.js'></script>
+</body>
+</html>
