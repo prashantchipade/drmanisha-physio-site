@@ -21,7 +21,7 @@
 <a class='btn ghost' href='gallery.html'  >Back to Gallery</a>
 <h1>Wellness Posters</h1>
 
-<div id="gallery" class="gallery-grid"></div>
+
 
 <div id="gallery" class="gallery-grid"></div>
 
@@ -77,15 +77,28 @@ lightbox.addEventListener('click', (e) => {
 </script>
 
 <style>
+
+
+.styled-img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  cursor: pointer;
+  border-radius: 12px;
+  transition: transform 0.3s;
+}
+
+
 .gallery-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 12px;
 }
 
+
 .gallery-grid img {
   width: 100%;
-  height: 200px;
+  height: 100%;
   object-fit: cover;
   cursor: pointer;
   border-radius: 8px;
