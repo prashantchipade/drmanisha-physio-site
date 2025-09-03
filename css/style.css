@@ -27,6 +27,7 @@ nav a:hover{color:var(--dark);background:#f1fbf6}
 .kicker{display:inline-block;background:#ecfdf7;color:var(--primary);padding:6px 10px;border-radius:999px;font-weight:700}
 .hero h2{font-size:34px;margin:10px 0 0;line-height:1.02}
 .lead{color:var(--muted);margin-top:12px;font-size:16px}
+.muted{color:var(--muted);margin-top:2px;font-size:16px}
 .hero .hero-card{background:var(--card);padding:18px;border-radius:16px;box-shadow:0 12px 40px rgba(2,132,199,0.04);border:1px solid #eef8f4}
 .btn{display:inline-block;padding:1px 1px;border-radius:1px;background:var(--primary);color:#fff;text-decoration:none;font-weight:700}
 .btn.ghost{background:#fff;color:var(--primary);border:1px solid #e6f3ee}
