@@ -1,0 +1,111 @@
+<footer class="footer-sitemap">
+  <div class="footer-container">
+    
+    <!-- About -->
+    <div class="footer-column">
+      <h4>About</h4>
+      <ul>
+        <li><a href="/about">About Dr. Manisha</a></li>
+        <li><a href="/clinic">Our Clinic</a></li>
+        <li><a href="/testimonials">Patient Stories</a></li>
+        <li><a href="/blog">Blog & Articles</a></li>
+      </ul>
+    </div>
+
+    <!-- Treatments -->
+    <div class="footer-column">
+      <h4>Treatments</h4>
+      <ul>
+        <li><a href="/treatments/physiotherapy">Physiotherapy</a></li>
+        <li><a href="/treatments/vertigo">Vertigo Care</a></li>
+        <li><a href="/treatments/back-pain">Back & Spine</a></li>
+        <li><a href="/treatments/joint-pain">Joint Pain</a></li>
+        <li><a href="/treatments/pediatric">Pediatric Rehab</a></li>
+      </ul>
+    </div>
+
+    <!-- Patient Resources -->
+    <div class="footer-column">
+      <h4>Patient Resources</h4>
+      <ul>
+        <li><a href="/appointments">Book Appointment</a></li>
+        <li><a href="/faqs">FAQs</a></li>
+        <li><a href="/gallery">Photo Gallery</a></li>
+        <li><a href="/contact">Contact Us</a></li>
+      </ul>
+    </div>
+
+    <!-- Information -->
+    <div class="footer-column">
+      <h4>Information</h4>
+      <ul>
+        <li><a href="/privacy-policy">Privacy Policy</a></li>
+        <li><a href="/terms">Terms & Conditions</a></li>
+        <li><a href="/sitemap">HTML Sitemap</a></li>
+      </ul>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    © <span id="year"></span> Dr. Manisha Physio Clinic. All rights reserved.
+  </div>
+</footer>
+
+
+<style>
+  .footer-sitemap {
+    background: #222;
+    padding: 40px 20px;
+    font-size: 14px;
+    color: #f1f1f1;
+  }
+  .footer-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    max-width: 1200px;
+    margin: auto;
+  }
+  .footer-column h4 {
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: #fff;
+  }
+  .footer-column ul {
+    list-style: none;
+    padding: 0;
+  }
+  .footer-column li {
+    margin-bottom: 8px;
+  }
+  .footer-column a {
+    text-decoration: none;
+    color: #f1f1f1;
+  }
+  .footer-column a:hover {
+    color: #ffcc00;
+  }
+  .footer-bottom {
+    margin-top: 30px;
+    text-align: center;
+    font-size: 12px;
+    color: #aaa;
+  }
+  @media (max-width: 900px) {
+    .footer-container {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  @media (max-width: 600px) {
+    .footer-container {
+      grid-template-columns: 1fr;
+    }
+  }
+
+</style>
+
+<script>
+  // Auto-update year
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
