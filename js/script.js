@@ -14,6 +14,14 @@
       });
     });
 
+//load footer
+
+  fetch("/footer.html")
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById("footer").innerHTML = data;
+    });
+
 
 // Mobile menu toggle
 document.addEventListener('DOMContentLoaded', function(){
