@@ -82,7 +82,7 @@ nav a:hover{color:var(--dark);background:#f1fbf6}
   border-radius: 12px;
   overflow: hidden;
   /* Default (desktop) */
-  height: 12vh;        /* relative to viewport height */
+  height: 14vh;        /* relative to viewport height */
   max-height: 400px;   /* keeps it controlled */
 }
 
