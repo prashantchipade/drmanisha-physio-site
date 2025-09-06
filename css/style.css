@@ -89,7 +89,7 @@ nav a:hover{color:var(--dark);background:#f1fbf6}
 /* Mobile view */
 @media (max-width: 768px) {
   .hero-banner {
-    height: 5vh;       /* smaller relative height */
+    height: 6vh;       /* smaller relative height */
     max-height: 220px;  /* cap the size */
   }
 }
