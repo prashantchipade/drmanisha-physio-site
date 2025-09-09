@@ -50,9 +50,44 @@
   <label>Name:</label>
   <input type="text" name="name" ><br><br>
 
-  <label>Email:</label>
-  <input type="email" name="email" ><br><br>
+<label>Mobile Number:</label>
+  <input type="tel" id="mobile" name="mobile" pattern="[0-9]{10}" maxlength="10" required>
+  <div id="mobileError" style="color:red; font-size:14px; display:none; margin-top:4px;"></div>
+  <br><br>
 
+<label>Appointment Date:</label>
+  <input type="date" id="apptDate" name="appointment_date" required>
+  <div id="dateError" style="color:red; font-size:14px; display:none; margin-top:4px;"></div>
+  <br><br>
+
+  <label>Appointment Time:</label>
+  <input type="time" id="apptTime" name="appointment_time" list="allowedTimes" required>
+  <datalist id="allowedTimes">
+    <!-- Morning slots -->
+    <option value="10:30">
+	<option value="10:45">
+    <option value="11:00">
+	<option value="11:15">
+    <option value="11:30">
+	<option value="11:45">
+    <option value="12:00">
+	<option value="12:15">
+	<option value="12:30">
+    <!-- Evening slots -->
+    <option value="17:30">
+	<option value="17:45">
+    <option value="18:00">
+	<option value="18:15">
+    <option value="18:30">
+	<option value="18:45">
+    <option value="19:00">
+	<option value="19:15">
+    <option value="19:30">
+  </datalist>
+  <div id="timeError" style="color:red; font-size:14px; display:none; margin-top:4px;"></div>
+  <br><br>
+
+		
   <label>Message:</label>
   <textarea name="message" ></textarea><br><br>
 
@@ -114,6 +149,73 @@
 document.addEventListener("DOMContentLoaded", function() {
   if (window.location.search.includes("submitted=true")) {
     document.getElementById("enquiryForm").style.display = "none";
+    document.getElementById("successMsg").style.display = "block";
+  }
+});
+
+
+	document.addEventListener("DOMContentLoaded", function() {
+  const form = document.getElementById("enquiryForm");
+  const dateField = document.getElementById("apptDate");
+  const timeField = document.getElementById("apptTime");
+  const mobileField = document.getElementById("mobile");
+  
+  const dateError = document.getElementById("dateError");
+  const timeError = document.getElementById("timeError");
+  const mobileError = document.getElementById("mobileError");
+
+  // Set min date = today
+  const today = new Date().toISOString().split("T")[0];
+  dateField.setAttribute("min", today);
+
+  form.addEventListener("submit", function(e) {
+    let valid = true;
+    dateError.style.display = "none";
+    timeError.style.display = "none";
+    mobileError.style.display = "none";
+
+    const selectedDate = new Date(dateField.value);
+    const selectedTime = timeField.value;
+    const mobile = mobileField.value.trim();
+
+    // Allowed time ranges
+    const morningStart = "10:30";
+    const morningEnd   = "12:00";
+    const eveningStart = "17:30";
+    const eveningEnd   = "19:30";
+
+    // Date validation
+    if (selectedDate < new Date(today)) {
+      dateError.textContent = "❌ Appointment date cannot be in the past.";
+      dateError.style.display = "block";
+      valid = false;
+    }
+
+    // Time validation
+    if (
+      !(
+        (selectedTime >= morningStart && selectedTime <= morningEnd) ||
+        (selectedTime >= eveningStart && selectedTime <= eveningEnd)
+      )
+    ) {
+      timeError.textContent = "❌ Please select a valid slot: 10:30–12:00 or 17:30–19:30.";
+      timeError.style.display = "block";
+      valid = false;
+    }
+
+    // Mobile validation
+    if (!/^\d{10}$/.test(mobile)) {
+      mobileError.textContent = "❌ Please enter a valid 10-digit mobile number.";
+      mobileError.style.display = "block";
+      valid = false;
+    }
+
+    if (!valid) e.preventDefault();
+  });
+
+  // Success message handling
+  if (window.location.search.includes("submitted=true")) {
+    form.style.display = "none";
     document.getElementById("successMsg").style.display = "block";
   }
 });
