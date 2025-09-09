@@ -67,6 +67,32 @@ document.getElementById("enquiryForm").addEventListener("submit", function(e) {
 </iframe>
 	-->
 	
+	<form id="enquiryForm" action="https://formsubmit.co/manishachipade@gmail.com" method="POST" style="max-width:500px; margin:auto;">
+  <!-- Hidden config fields -->
+  <input type="hidden" name="_next" value="https://www.drmanishaphysio.com/contact.html?submitted=true">
+  <input type="hidden" name="_captcha" value="false">
+  <input type="hidden" name="_template" value="table">
+
+  <label>Name:</label>
+  <input type="text" name="name" ><br><br>
+
+  <label>Email:</label>
+  <input type="email" name="email" ><br><br>
+
+  <label>Message:</label>
+  <textarea name="message" ></textarea><br><br>
+
+  <button type="submit">Send</button>
+</form>
+
+<!-- Success message (hidden by default) -->
+<div id="successMsg" style="display:none; color:green; font-weight:bold; margin-top:20px;">
+  ✅ Thank you! Your enquiry has been submitted successfully.
+</div>
+
+	
+	
+	<!--
 	
 <form id="enquiryForm" method="POST">
   <input type="hidden" name="_captcha" value="false">
@@ -84,7 +110,7 @@ document.getElementById("enquiryForm").addEventListener("submit", function(e) {
   ✅ Thank you! Your enquiry has been submitted successfully.
 </div>
 
-
+-->
 
 
 
