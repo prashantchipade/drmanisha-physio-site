@@ -48,7 +48,7 @@
 
 
   <label>Name:</label>
-  <input type="text" name="name" ><br><br>
+  <input type="text" name="name" required><br><br>
 
 <label>Mobile Number:</label>
   <input type="tel" id="mobile" name="mobile" pattern="[0-9]{10}" maxlength="10" required>
@@ -56,12 +56,12 @@
   <br><br>
 
 <label>Appointment Date:</label>
-  <input type="date" id="apptDate" name="appointment_date" required>
+  <input type="date" id="apptDate" name="appointment_date" >
   <div id="dateError" style="color:red; font-size:14px; display:none; margin-top:4px;"></div>
   <br><br>
 
   <label>Appointment Time:</label>
-  <input type="time" id="apptTime" name="appointment_time" list="allowedTimes" required>
+  <input type="time" id="apptTime" name="appointment_time" list="allowedTimes" >
   <datalist id="allowedTimes">
     <!-- Morning slots -->
     <option value="10:30">
@@ -91,12 +91,12 @@
   <label>Message:</label>
   <textarea name="message" ></textarea><br><br>
 
-  <button type="submit">Send</button>
+  <button type="submit">Submit</button>
 </form>
 
 <!-- Success message (hidden by default) -->
 <div id="successMsg" style="display:none; color:green; font-weight:bold; margin-top:20px; padding:10px; border:1px solid green; border-radius:5px;">
-  ✅ Thank you! Your enquiry has been submitted successfully.
+  ✅ Thank you! Your request has been submitted successfully.
 </div>
 
 	
