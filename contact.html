@@ -21,13 +21,7 @@
 </script>
 
 
-<script>
-// Check if redirected with ?submitted=true
-if (window.location.search.includes("submitted=true")) {
-  document.getElementById("enquiryForm").style.display = "none";
-  document.getElementById("successMsg").style.display = "block";
-}
-</script>
+
 
 
 
@@ -66,11 +60,10 @@ if (window.location.search.includes("submitted=true")) {
 </form>
 
 <!-- Success message (hidden by default) -->
-<div id="successMsg" style="display:none; color:green; font-weight:bold; margin-top:20px;">
+<div id="successMsg" style="display:none; color:green; font-weight:bold; margin-top:20px; padding:10px; border:1px solid green; border-radius:5px;">
   ✅ Thank you! Your enquiry has been submitted successfully.
 </div>
 
-	
 	
 	
 
@@ -116,7 +109,15 @@ if (window.location.search.includes("submitted=true")) {
 
 
 
-
+	
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  if (window.location.search.includes("submitted=true")) {
+    document.getElementById("enquiryForm").style.display = "none";
+    document.getElementById("successMsg").style.display = "block";
+  }
+});
+</script>
 
 
 
