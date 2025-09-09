@@ -23,20 +23,30 @@
 
 <script>
 document.getElementById("enquiryForm").addEventListener("submit", function(e) {
-  e.preventDefault(); // stop normal form submit
+  e.preventDefault();
+
   fetch("https://formsubmit.co/manishachipade@gmail.com", {
     method: "POST",
-    body: new FormData(this)
-  }).then(response => {
+    headers: { 
+      'Content-Type': 'application/x-www-form-urlencoded',
+      'Accept': 'application/json'
+    },
+    body: new URLSearchParams(new FormData(this)).toString()
+  })
+  .then(response => {
     if (response.ok) {
-      this.reset(); // clear form
-      document.getElementById("successMsg").style.display = "block"; // show message
+      this.reset();
+      document.getElementById("successMsg").style.display = "block";
     } else {
       alert("There was a problem submitting the form.");
     }
-  }).catch(error => alert("Error: " + error));
+  })
+  .catch(error => alert("Error: " + error));
 });
+
+
 </script>
+
 
 
 </header>
