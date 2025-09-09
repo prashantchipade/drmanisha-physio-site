@@ -19,6 +19,26 @@
 
   gtag('config', 'G-7RN0DTY7KF');
 </script>
+
+
+<script>
+document.getElementById("enquiryForm").addEventListener("submit", function(e) {
+  e.preventDefault(); // stop normal form submit
+  fetch("https://formsubmit.co/manishachipade@gmail.com", {
+    method: "POST",
+    body: new FormData(this)
+  }).then(response => {
+    if (response.ok) {
+      this.reset(); // clear form
+      document.getElementById("successMsg").style.display = "block"; // show message
+    } else {
+      alert("There was a problem submitting the form.");
+    }
+  }).catch(error => alert("Error: " + error));
+});
+</script>
+
+
 </header>
 
 
@@ -28,31 +48,86 @@
 
 <h3 style="margin-left:20px"> Contact Information </h3>
 
-
-  <aside class='card'>
-    <h4>Clinic Address</h4>
-    <p>F28, Destination Center, Magarpatta City, Hadapsar, Pune – 411028</p>
-    <p style='margin-top:8px'><strong>Phone:</strong> <a href='tel:+919881912065'>+91 9881912065</a> <a class='btn ghost' href='https://wa.me/919881912065' target='_blank' style='margin-left:10px'>WhatsApp</a></p>
-    <p style='margin-top:8px'><strong>Email:</strong> manishachipade@gmail.com</p>
+<div class="gallery-grid">
+    <div class="hero-card">
 	<!--
-    <div class='contact-map' style='margin-top:12px'><iframe width='100%' height='200' style='border:0' loading='lazy' src='https://maps.google.com/maps?q=Shop%20No%20F28%20Destination%20Center%20Magarpatta%20City%20Hadapsar%20Pune%20411028&output=embed'></iframe></div>
-	
-	<div class='contact-map' style='margin-top:12px'><iframe width='100%' height='200' style='border:0' loading='lazy' src='https://maps.google.com/maps?q=Dr.%20Manisha%27s%20Physiotherapy%20-%20Advanced%20Laser%20Center&output=embed'></iframe></div>
+<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSejgvTNHXGuilqKNWmP7dt1IMa1vrgvkmIg-J4xdg83t9IUaA/viewform?usp=header" 
+        width="100%" height="800" frameborder="0" marginheight="0" marginwidth="0">
+  Loading…
+</iframe>
 	-->
-	<div class='contact-map' style='margin-top:12px'>
-    <iframe width='100%' height='400' style='border:0' loading='lazy'
-        src='https://maps.google.com/maps?q=Dr.%20Manisha%27s%20Physiotherapy%20-%20Advanced%20Laser%20Center&output=embed'>
-    </iframe>
-    <div style="text-align:center; margin-top:10px;">
-        <a href="https://www.google.com/maps/dir/?api=1&destination=Dr.+Manisha's+Physiotherapy+-+Advanced+Laser+Center"
-           target="_blank"
-           style="display:inline-block; padding:10px 20px; background-color:#4CAF50; color:white; text-decoration:none; border-radius:6px;">
-            Get Directions
-        </a>
-    </div>
-</div>
-  </aside>
+	
+	
+<form id="enquiryForm" method="POST">
+  <input type="hidden" name="_captcha" value="false">
+  <input type="hidden" name="_template" value="table">
 
+  <input type="text" name="name" placeholder="Full Name" ><br><br>
+  <input type="email" name="email" placeholder="Email" ><br><br>
+  <input type="tel" name="phone" placeholder="Phone" ><br><br>
+  <textarea name="message" placeholder="Message" ></textarea><br><br>
+
+  <button type="submit">Submit</button>
+</form>
+
+<div id="successMsg" style="display:none; color:green; margin-top:20px;">
+  ✅ Thank you! Your enquiry has been submitted successfully.
+</div>
+
+
+
+
+
+
+
+
+<!--
+	
+		<form action="https://formsubmit.co/manishachipade@gmail.com" method="POST" style="max-width:500px; margin:auto;">
+		  <label for="name">Full Name</label><br>
+		  <input type="text" id="name" name="name" required><br><br>
+
+		  <label for="email">Email</label><br>
+		  <input type="email" id="email" name="email" required><br><br>
+
+		  <label for="phone">Phone</label><br>
+		  <input type="tel" id="phone" name="phone" required><br><br>
+
+		  <label for="message">Message</label><br>
+		  <textarea id="message" name="message" rows="4" required></textarea><br><br>
+
+		  <button type="submit">Submit</button>
+		</form>
+	-->
+	</div>
+
+
+	<div class="hero-card">
+	  <aside class='card'>
+		<h4>Clinic Address</h4>
+		<p>F28, Destination Center, Magarpatta City, Hadapsar, Pune – 411028</p>
+		<p style='margin-top:8px'><strong>Phone:</strong> <a href='tel:+919881912065'>+91 9881912065</a> <a class='btn ghost' href='https://wa.me/919881912065' target='_blank' style='margin-left:10px'>WhatsApp</a></p>
+		<p style='margin-top:8px'><strong>Email:</strong> manishachipade@gmail.com</p>
+		<!--
+		<div class='contact-map' style='margin-top:12px'><iframe width='100%' height='200' style='border:0' loading='lazy' src='https://maps.google.com/maps?q=Shop%20No%20F28%20Destination%20Center%20Magarpatta%20City%20Hadapsar%20Pune%20411028&output=embed'></iframe></div>
+		
+		<div class='contact-map' style='margin-top:12px'><iframe width='100%' height='200' style='border:0' loading='lazy' src='https://maps.google.com/maps?q=Dr.%20Manisha%27s%20Physiotherapy%20-%20Advanced%20Laser%20Center&output=embed'></iframe></div>
+		-->
+		<div class='contact-map' style='margin-top:12px'>
+		<iframe width='100%' height='400' style='border:0' loading='lazy'
+			src='https://maps.google.com/maps?q=Dr.%20Manisha%27s%20Physiotherapy%20-%20Advanced%20Laser%20Center&output=embed'>
+		</iframe>
+		<div style="text-align:center; margin-top:10px;">
+			<a href="https://www.google.com/maps/dir/?api=1&destination=Dr.+Manisha's+Physiotherapy+-+Advanced+Laser+Center"
+			   target="_blank"
+			   style="display:inline-block; padding:10px 20px; background-color:#4CAF50; color:white; text-decoration:none; border-radius:6px;">
+				Get Directions
+			</a>
+		</div>
+	</div>
+	</aside>
+	</div>
+</div>
 
 </main>
 <footer id="footer"></footer>
