@@ -22,29 +22,11 @@
 
 
 <script>
-document.getElementById("enquiryForm").addEventListener("submit", function(e) {
-  e.preventDefault();
-
-  fetch("https://formsubmit.co/manishachipade@gmail.com", {
-    method: "POST",
-    headers: { 
-      'Content-Type': 'application/x-www-form-urlencoded',
-      'Accept': 'application/json'
-    },
-    body: new URLSearchParams(new FormData(this)).toString()
-  })
-  .then(response => {
-    if (response.ok) {
-      this.reset();
-      document.getElementById("successMsg").style.display = "block";
-    } else {
-      alert("There was a problem submitting the form.");
-    }
-  })
-  .catch(error => alert("Error: " + error));
-});
-
-
+// Check if redirected with ?submitted=true
+if (window.location.search.includes("submitted=true")) {
+  document.getElementById("enquiryForm").style.display = "none";
+  document.getElementById("successMsg").style.display = "block";
+}
 </script>
 
 
