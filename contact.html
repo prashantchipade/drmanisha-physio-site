@@ -32,7 +32,6 @@
 
 <main class='container'>
 
-<h3 style="margin-left:20px"> Contact Information </h3>
 
 <div class="gallery-grid">
     <div class="hero-card">
@@ -52,7 +51,7 @@
   <input type="text" name="name" required><br><br>
 
 <label>Mobile Number <span style="color:red;">*</span></label>
-<div  style="color:black; font-size:11px;"><i>(You will receive appointment confirmation SMS)</i> </div>
+<div class='btn ghost'  style="color:green; font-size:11px;"><i>(You will receive appointment confirmation SMS)</i> </div>
   <input type="tel" id="mobile" name="mobile" pattern="[0-9]{10}" maxlength="10" required>
  
   
@@ -65,7 +64,7 @@
   <br><br>
 
   <label>Appointment Time <span style="color:red;">*</span></label>
-  <div  style="color:black; font-size:11px;"><i>(10:30 am to 12:30 pm | 5:30 pm to 7:30 pm)</i> </div>
+  <div  class='btn ghost' style="color:green; font-size:11px;"><i>(10:30 am to 12:30 pm | 5:30 pm to 7:30 pm)</i> </div>
   <input type="time" id="apptTime" name="appointment_time" list="allowedTimes" required>
   <datalist id="allowedTimes">
     <!-- Morning slots -->
@@ -96,7 +95,7 @@
   <label>Message</label>
   <textarea name="message" ></textarea><br><br>
 
-  <button type="submit" style="display:inline-block; padding:10px 20px; background-color:#4CAF50; color:white; text-decoration:none; border-radius:6px;">Submit</button>
+  <button type="submit" class='btn ghost' style="display:inline-block; padding:10px 20px; background-color:#4CAF50; color:white; text-decoration:none; border-radius:6px;">Submit</button>
 </form>
 
 <!-- Success message (hidden by default) -->
@@ -122,13 +121,12 @@
 		<iframe width='100%' height='400' style='border:0' loading='lazy'
 			src='https://maps.google.com/maps?q=Dr.%20Manisha%27s%20Physiotherapy%20-%20Advanced%20Laser%20Center&output=embed'>
 		</iframe>
-		<div style="margin-top:10px;">
+		<div style="margin-left:13px;margin-top:10px;">
 			<a href="https://www.google.com/maps/dir/?api=1&destination=Dr.+Manisha's+Physiotherapy+-+Advanced+Laser+Center"
-			   target="_blank"
-			   style="display:inline-block; padding:10px 20px; background-color:#4CAF50; color:white; text-decoration:none; border-radius:6px;">
+			   target="_blank" class='btn ghost'
+			   style="font-size:13px;display:inline-block; padding:8px 16px; background-color:#4CAF50; color:white; text-decoration:none; border-radius:6px;">
 				Get Directions
 			</a>
-			
 		</div>
 	</div>
 	
