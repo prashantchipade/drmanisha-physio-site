@@ -48,20 +48,24 @@
 
 
 
-  <label>Name:</label>
+  <label>Name <span style="color:red;">*</span></label>
   <input type="text" name="name" required><br><br>
 
-<label>Mobile Number:</label>
+<label>Mobile Number <span style="color:red;">*</span></label>
+<div  style="color:black; font-size:11px;"><i>(You will receive confrimation SMS)</i> </div>
   <input type="tel" id="mobile" name="mobile" pattern="[0-9]{10}" maxlength="10" required>
-  <div id="mobileError" style="color:red; font-size:14px; display:none; margin-top:4px;"></div>
+ 
+  
+  <div id="mobileError" style="color:red; font-size:10px; display:none; margin-top:4px;"></div>
   <br><br>
 
-<label>Appointment Date:</label>
+<label>Appointment Date <span style="color:red;">*</span></label>
   <input type="date" id="apptDate" name="appointment_date" required>
-  <div id="dateError" style="color:red; font-size:14px; display:none; margin-top:4px;"></div>
+  <div id="dateError" style="color:red; font-size:10px; display:none; margin-top:4px;"></div>
   <br><br>
 
-  <label>Appointment Time:</label>
+  <label>Appointment Time <span style="color:red;">*</span></label>
+  <div  style="color:black; font-size:11px;"><i>(10:30 am to 12:30 pm | 5:30 pm to 7:30 pm)</i> </div>
   <input type="time" id="apptTime" name="appointment_time" list="allowedTimes" required>
   <datalist id="allowedTimes">
     <!-- Morning slots -->
@@ -89,7 +93,7 @@
   <br><br>
 
 		
-  <label>Message:</label>
+  <label>Message</label>
   <textarea name="message" ></textarea><br><br>
 
   <button type="submit" style="display:inline-block; padding:10px 20px; background-color:#4CAF50; color:white; text-decoration:none; border-radius:6px;">Submit</button>
@@ -104,7 +108,7 @@
 
 
 	<div class="hero-card">
-	 
+	  
 		<h4>Clinic Address</h4>
 		<p>F28, Destination Center, Magarpatta City, Hadapsar, Pune – 411028</p>
 		<p style='margin-top:8px'><strong>Phone:</strong> <a href='tel:+919881912065'>+91 9881912065</a> <a class='btn ghost' href='https://wa.me/919881912065' target='_blank' style='margin-left:10px'>WhatsApp</a></p>
@@ -124,6 +128,7 @@
 			   style="display:inline-block; padding:10px 20px; background-color:#4CAF50; color:white; text-decoration:none; border-radius:6px;">
 				Get Directions
 			</a>
+			
 		</div>
 	</div>
 	
