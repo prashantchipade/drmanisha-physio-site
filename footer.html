@@ -100,6 +100,35 @@
   <div class="footer-bottom">
     © <span id="year"></span> Dr. Manisha's Physiotherapy. All rights reserved.
   </div>
+
+	<a href="https://www.drmanishaphysio.com/contact.html" 
+   class="floating-book">
+  Book Appointment
+</a>
+
+<style>
+  .floating-book {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: var(--primary);
+    color: #fff;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 10px 16px;
+    border-radius: 8px;
+    text-decoration: none;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    z-index: 9999;
+  }
+  .floating-book:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 14px rgba(0,0,0,0.3);
+    background: #14885a; /* darker shade for hover */
+  }
+</style>
+
 </footer>
 
 
@@ -159,3 +188,4 @@
   // Auto-update year
   document.getElementById("year").textContent = new Date().getFullYear();
 </script>
+
