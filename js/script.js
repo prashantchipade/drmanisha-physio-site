@@ -43,15 +43,45 @@ document.addEventListener('DOMContentLoaded', function(){
     });
   });
 
-  // FAQ accordion
+
+document.querySelectorAll(".faq-question").forEach(btn => {
+  btn.addEventListener("click", function() {
+    const ans = this.nextElementSibling;
+
+    // Close all others
+    document.querySelectorAll(".faq-answer").forEach(el => {
+      if (el !== ans) el.style.maxHeight = "";
+    });
+    document.querySelectorAll(".faq-question").forEach(el => {
+      if (el !== this) el.classList.remove("active");
+    });
+
+    // Toggle current one
+    if (ans.style.maxHeight) {
+      ans.style.maxHeight = "";
+      this.classList.remove("active");
+    } else {
+      ans.style.maxHeight = ans.scrollHeight + "px";
+      this.classList.add("active");
+    }
+  });
+});
+
+
+  /* FAQ accordion
   document.querySelectorAll('.faq-item').forEach(item=>{
     item.addEventListener('click', ()=>{
       const open = item.classList.toggle('open');
+	  
       const ans = item.querySelector('.answer');
       if(open){ ans.style.maxHeight = ans.scrollHeight + 'px'; }
-      else { ans.style.maxHeight = null; }
+      else { 
+	  alert (open)
+		ans.style.maxHeight = ""; 
+		}
     });
   });
+  */
 
   // Build WhatsApp message for contact form
   const waBtn = document.getElementById('waContact');
@@ -91,6 +121,5 @@ document.addEventListener('DOMContentLoaded', function(){
     sendEmail.textContent = 'Send via Email';
   });
 });
-
 
 

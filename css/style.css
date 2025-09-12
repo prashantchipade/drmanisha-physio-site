@@ -234,3 +234,46 @@ button {
 button:hover {
   
 }
+
+.faq-question {
+  display: block;
+  width: 100%;
+  background: none;
+  border: none;
+  padding: 10px 0;
+  font-size: 14px;
+  font-weight: 600;
+  color: #222;
+  text-align: left;
+  cursor: pointer;
+  position: relative;
+}
+
+/* Optional underline effect on hover */
+.faq-question:hover {
+  color: var(--primary);
+}
+
+/* Add + / – toggle symbol */
+.faq-question::after {
+  position: absolute;
+  right: 0;
+  font-size: 18px;
+  color: #666;
+  transition: transform 0.3s ease;
+}
+
+.faq-question.active::after {
+  color: var(--primary);
+}
+
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease;
+  font-size: 14px;
+  color: #555;
+  line-height: 1.6;
+  padding-left: 5px; /* small indent */
+}
+
