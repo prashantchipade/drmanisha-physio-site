@@ -122,29 +122,3 @@ document.querySelectorAll(".faq-question").forEach(btn => {
   });
 });
 
-// Example dynamic loader
-document.addEventListener("DOMContentLoaded", function () {
-  // load header
-  fetch("header.html")
-    .then(res => res.text())
-    .then(data => {
-      document.getElementById("header").innerHTML = data;
-    });
-
-  // load footer
-  fetch("footer.html")
-    .then(res => res.text())
-    .then(data => {
-      document.getElementById("footer").innerHTML = data;
-
-      // ✅ Now footer is injected, so floatingBook exists
-      const currentPage = window.location.pathname.split("/").pop();
-//const bookBtn = document.getElementById("floatingBook");
-		const bookBtn = document.querySelector(".floating-book");
-      if (bookBtn && currentPage === "contact.html") {
-        bookBtn.style.display = "none";
-      }
-    });
-});
-
-
