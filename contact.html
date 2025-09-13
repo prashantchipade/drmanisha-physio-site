@@ -135,8 +135,8 @@ document.addEventListener("DOMContentLoaded", function() {
   dateField.setAttribute("min", today);
 
   // Custom holidays
-  const offDays = ["2025-09-15", "2025-09-20"];
-  //const offDays = ["2099-01-01"];
+  //const offDays = ["2025-09-15", "2025-09-20"];
+  const offDays = [""];
 
   form.addEventListener("submit", function(e) {
     let valid = true;
@@ -165,7 +165,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
       // Check custom off-days
       if (offDays.includes(yyyy_mm_dd)) {
-        dateError.textContent = "❌ This date is blocked.";
+        dateError.textContent = "❌ Clinic is closed on this date.";
         dateError.style.display = "block";
         valid = false;
       }
