@@ -158,7 +158,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
       // Check Sunday
       if (selectedDate.getDay() === 0) {
-        dateError.textContent = "❌ Sundays are not available.";
+        dateError.textContent = "❌ Clinic is closed on Sundays.";
         dateError.style.display = "block";
         valid = false;
       }
