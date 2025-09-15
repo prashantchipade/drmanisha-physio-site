@@ -16,12 +16,14 @@
 
 //load footer
 
+/*
   fetch("/footer.html")
     .then(response => response.text())
     .then(data => {
       document.getElementById("footer").innerHTML = data;
     });
 
+*/
 
 // Mobile menu toggle
 document.addEventListener('DOMContentLoaded', function(){
@@ -122,3 +124,20 @@ document.querySelectorAll(".faq-question").forEach(btn => {
   });
 });
 
+document.addEventListener("DOMContentLoaded", function () {
+
+  // load footer
+  fetch("footer.html")
+    .then(res => res.text())
+    .then(data => {
+      document.getElementById("footer").innerHTML = data;
+
+      // ✅ Now footer is injected, so floatingBook exists
+      const currentPage = window.location.pathname.split("/").pop();
+//const bookBtn = document.getElementById("floatingBook");
+		const bookBtn = document.querySelector(".floating-book");
+      if (bookBtn && currentPage === "contact.html") {
+        bookBtn.style.display = "none";
+      }
+    });
+});
