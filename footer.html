@@ -76,8 +76,8 @@
 			</iframe>
 			<div style="text-align:center; margin-top:10px;">
 				<a href="https://www.google.com/maps/dir/?api=1&destination=Dr.+Manisha's+Physiotherapy+-+Advanced+Laser+Center"
-				   target="_blank"
-				   style="display:inline-block; padding:10px 20px; background-color:#4CAF50; color:white; text-decoration:none; border-radius:6px;">
+				   target="_blank" 
+				   style="font-size:13px;display:inline-block; padding:8px 16px;  background-color:#4CAF50; color:white;  text-decoration:none; border-radius:6px;">
 					Get Directions
 				</a>
 			</div>
@@ -100,34 +100,52 @@
   <div class="footer-bottom">
     © <span id="year"></span> Dr. Manisha's Physiotherapy. All rights reserved.
   </div>
-
-	<a href="contact.html" 
-   class="floating-book">
+  
+  <!--
+  
+<a  id="floatingBook" href="contact.html" class="floating-book">
   Book Appointment
 </a>
+-->
 
-<style>
-  .floating-book {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background: var(--primary);
-    color: #fff;
-    font-size: 14px;
-    font-weight: 600;
-    padding: 10px 16px;
-    border-radius: 8px;
-    text-decoration: none;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-    z-index: 9999;
-  }
-  .floating-book:hover {
-    transform: scale(1.05);
-    box-shadow: 0 6px 14px rgba(0,0,0,0.3);
-    background: #14885a; /* darker shade for hover */
-  }
-</style>
+
+<div class="floating-actions">
+  <!-- Book Appointment button -->
+  <a id="floatingBook" href="contact.html" class="floating-book">
+    Book Appointment
+  </a>
+
+  <!-- WhatsApp floating icon -->
+  <a
+    class="floating-whatsapp"
+    href="https://wa.me/919881912065?text=Hello%20I%20want%20to%20book%20an%20appointment"
+    target="_blank"
+    rel="noopener"
+    aria-label="Chat on WhatsApp"
+  >
+    <!-- WhatsApp SVG -->
+    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <path d="M20.52 3.48A11.86 11.86 0 0 0 12 .5C6.07.5 1.3 5.27 1.3 11.2c0 1.97.52 3.9 1.5 5.6L.1 23.5l6.86-1.77a11.64 11.64 0 0 0 4.98 1.02c5.93 0 10.7-4.77 10.7-10.7 0-3-1.18-5.8-3.12-7.57zM12 20.5a9.3 9.3 0 0 1-4.78-1.29l-.34-.2-4.07 1.05 1.08-3.95-.21-.37A8.8 8.8 0 1 1 12 20.5zm5.1-6.9c-.28-.14-1.67-.82-1.93-.92-.26-.1-.45-.14-.64.14-.19.27-.74.92-.9 1.11-.16.19-.32.21-.6.07-.28-.14-1.18-.44-2.24-1.38-.83-.74-1.39-1.66-1.55-1.94-.16-.27-.02-.42.12-.56.12-.12.28-.32.42-.48.14-.16.19-.27.28-.46.09-.19.04-.36-.02-.5-.06-.14-.64-1.55-.88-2.12-.23-.55-.47-.47-.64-.48l-.55-.01c-.19 0-.5.07-.77.36-.27.29-1.04 1.01-1.04 2.46 0 1.45 1.06 2.86 1.21 3.06.15.2 2.08 3.25 5.05 4.56 2.97 1.31 2.97.87 3.5.82.53-.05 1.72-.7 1.96-1.37.24-.67.24-1.24.17-1.37-.07-.12-.26-.19-.54-.33z"/>
+    </svg>
+  </a>
+
+  <!-- Call floating icon -->
+  <a
+    class="floating-call"
+    href="tel:+919881912065"
+    aria-label="Call Clinic"
+  >
+    <!-- Phone SVG -->
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+      <path d="M6.62 10.79a15.46 15.46 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24c1.12.37 2.33.57 3.58.57a1 1 0 011 1V20a1 1 0 01-1 1C10.07 21 3 13.93 3 5a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.46.57 3.58.12.34.04.72-.24 1.01l-2.2 2.2z"/>
+    </svg>
+  </a>
+</div>
+
+
+
+
+
 
 </footer>
 
@@ -187,6 +205,6 @@
 <script>
   // Auto-update year
   document.getElementById("year").textContent = new Date().getFullYear();
+
+
 </script>
-
-
