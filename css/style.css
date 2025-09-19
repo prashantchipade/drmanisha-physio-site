@@ -95,6 +95,37 @@ nav a:hover{color:var(--dark);background:#f1fbf6}
   }
 }
 
+
+
+
+.hero-tag {
+	display:inline-block; 
+	padding:0px 0px; 
+	background-color:#4CAF50; 
+	color:#fff; 
+	text-decoration:none; 
+	border-radius:6px;
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+  overflow: hidden;
+  /* Default (desktop) */
+  height:6vh;        /* relative to viewport height */
+  max-height: 400px;   /* keeps it controlled */
+}
+
+/* Mobile view */
+@media (max-width: 768px) {
+  .hero-tag {
+    height: 8vh;       /* smaller relative height */
+    max-height: 220px;  /* cap the size */
+	font-size: 13px;
+  }
+}
+
+
+
 .slideshow-container {
   position: relative;
   width: 100%;
