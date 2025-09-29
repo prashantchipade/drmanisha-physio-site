@@ -339,6 +339,7 @@ button:hover {
 
 /* WhatsApp round button */
 .floating-whatsapp,
+.floating-google,
 .floating-call {
   width: 56px;
   height: 56px;
@@ -353,8 +354,10 @@ button:hover {
 
 .floating-whatsapp { background: #25D366; }
 .floating-call { background: #0dcaf0; } /* Bootstrap cyan (change if you like) */
+.floating-google { background: #ffffff; } /* Bootstrap cyan (change if you like) */
 
 .floating-whatsapp svg,
+.floating-google svg,
 .floating-call svg {
   width: 24px;
   height: 24px;
@@ -369,6 +372,6 @@ button:hover {
 /* responsive tweaks */
 @media (max-width: 480px) {
   .floating-actions { right: 12px; bottom: 12px; gap: 10px; }
-  .floating-whatsapp, .floating-call { width: 48px; height: 48px; }
+  .floating-whatsapp, .floating-call, .floating-google { width: 48px; height: 48px; }
   .floating-book { padding: 8px 12px; font-size: 14px; }
 }
