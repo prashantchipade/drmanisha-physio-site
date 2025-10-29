@@ -24,9 +24,16 @@
   <div class="hero-card">
     <h4 style="padding-left:20px">Book Appointment</h4>
     
+	<!--
     <form id="enquiryForm" action="https://formsubmit.co/prashantchipade@gmail.com" method="POST" style="max-width:500px; margin:auto;">
-      <!-- Hidden config fields -->
-      <input type="hidden" name="_next" value="https://www.drmanishaphysio.com/contact.html?submitted=true">
+            <input type="hidden" name="_next" value="https://www.drmanishaphysio.com/contact.html?submitted=true">
+	  
+	 -->
+
+	<form action="https://api.web3forms.com/submit" method="POST">
+		<input type="hidden" name="access_key" value="790daa1f-07b9-454f-b4b9-cdf77aa61859">	 
+		<input type="hidden" name="redirect" value="https://www.drmanishaphysio.com/contact.html?submitted=true">
+
       <input type="hidden" name="_captcha" value="false">
       <input type="hidden" name="_template" value="table">
       <input type="hidden" name="_subject" value="New Submission">
