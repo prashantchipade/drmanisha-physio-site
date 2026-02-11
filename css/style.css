@@ -375,3 +375,19 @@ button:hover {
   .floating-whatsapp, .floating-call, .floating-google { width: 48px; height: 48px; }
   .floating-book { padding: 8px 12px; font-size: 14px; }
 }
+
+
+:root {
+  --header-height: 80px;
+}
+
+html {
+  scroll-padding-top: var(--header-height);
+  scroll-behavior: smooth;
+}
+
+@media (max-width: 768px) {
+  :root {
+    --header-height: 150px;
+  }
+}
