@@ -1,123 +1,168 @@
-<!doctype html>
-<html lang='en'>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<meta charset='utf-8'><meta name='viewport' content='width=device-width,initial-scale=1'>
-<title>Dr Manisha's Physiotherapy</title>
-<link rel='stylesheet' href='css/style.css'>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dr Manisha Physio Clinic</title>
+
+  <!-- Existing CSS -->
+  <link rel="stylesheet" href="css/style.css" />
+
+
 </head>
 <body>
 
-<header id="header">
-
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-7RN0DTY7KF">
-</script>
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
 
-  gtag('config', 'G-7RN0DTY7KF');
+
+
+function scrollToHash() {
+  if (!window.location.hash) return;
+
+  const target = document.querySelector(window.location.hash);
+  if (target) {
+    target.scrollIntoView({ behavior: "smooth" });
+  }
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  // Try immediately
+  scrollToHash();
+
+  // Retry after dynamic loads
+  setTimeout(scrollToHash, 300);
+  setTimeout(scrollToHash, 800);
+});
 </script>
-</header>
-
-<script>
-	let slideIndex = 0;
-	let slides = document.getElementsByClassName("slide");
-
-	// Show the first slide initially
-	if(slides.length > 0){
-	  slides[0].style.display = "block";
-	}
-
-	function showSlidesAuto() {
-	  for (let i = 0; i < slides.length; i++) {
-		slides[i].style.display = "none";
-	  }
-	  slideIndex++;
-	  if (slideIndex > slides.length) slideIndex = 1;
-	  slides[slideIndex-1].style.display = "block";
-	  setTimeout(showSlidesAuto, 4000); // Change slide every 4 seconds
-	}
-
-	// Start the auto slideshow after DOM is ready
-	window.onload = showSlidesAuto;
-
-
-	
-</script>
-
 
 <main class='container'>
-	
-	
-	<div class="hero-banner" >
-	  <div class="slideshow-container">
-		<div class="slide fade">
-		  <img src="assets/Slide1.png" alt="clinic 1" >
-		</div>
-		<div  class="slide fade">
-		  <img src="assets/Slide2.png" alt="clinic 2" >
-		</div>
-		<div class="slide fade">
-		  <img src="assets/Slide3.png" alt="clinic 3" >
-		</div>
-		<div class="slide fade">
-		  <img src="assets/Slide4.png" alt="clinic 4" >
-		</div>
-	  </div>
-	</div>
+<!-- HEADER / NAVIGATION -->
 
 
-<section class='hero2' id='home'>
-  <div class='hero-card'>
-    <img src='assets/Ad1.png' alt='clinic image' style='width:100%;height:100%;object-fit:cover;border-radius:12px'>
-  </div>
+<header id="header"></header>
 
-  <div>
-		<h2>Move better. Hurt less.</h2>
-    <p class='lead'>Evidence-based physiotherapy, hands-on treatment and tailored exercise programs to get you back to what you love.</p>
-    
-	<!-- <div class="desktop-only"> -->
-	
-	<div >
-      
-	  <a class='btn ghost' href='tel:+919881912065' target='_blank' style='margin-left:10px'>Call Clinic</a>
-      <a class='btn ghost' href='https://wa.me/919881912065' target='_blank' style='margin-left:10px'>WhatsApp</a>
-    </div>
-	
-    <div class='services-grid' style='margin-top:28px'>
-      <div class='card'><h3>20+ years of Experience </h3><p class='muted'>Thousands of patients treated with 100% satisfaction.</p></div>
-      <div class='card'><h3>Advanced Protocols</h3><p class='muted'>Photo biomodulation using Class IV Laser - First in Pune.</p></div>
-      <div class='card'><h3>Holistic Approach</h3><p class='muted'>Empowering patients with lifestyle improvement for  overall wellness.</p></div>
-    </div>
-  </div>
-  
-  
-	</div>
 
-  
-  
-</section>
 
-	<div class="hero-tag"  >
-		<p style="text-align:center;" >We just don't treat your Pain.. We empower you for better life ! Your pain-free life starts here !</p>
-	</div>
-  
-<!--
-	<div class='btn ghost'>
-		<h3>We just don't treat your Pain.. We empower you for better life!</h3>	
-	</div>
-	Move better. Hurt less.
 
--->
+<!-- SECTIONS -->
+
+<section id="index"></section>
+<section id="about"></section>
+<section id="specialities"></section>
+<section id="testimonials"></section>
+<section id="contact"></section>
+<section id="services"></section>
+<section id="knee_pain"></section>
+<section id="shoulder_pain"></section>
+<section id="joint_artritic_pain"></section>
+<section id="hip_pain"></section>
+<section id="foot_ankle_pain"></section>
+<section id="spinal_injuries"></section>
+<section id="bells_palsy"></section>
+<section id="vertigo"></section>
+<section id="postural_corrections"></section>
+<section id="post_surgery_rehab"></section>
+<section id="sport_injury_managment"></section>
+<section id="geriatric_physiotherapy"></section>
+<section id="gallery"></section>
+<section id="physio_conditions"></section>
+<section id="weight_management"></section>
+<section id="wellness_posters"></section>
+<section id="faqs"></section>
 
 </main>
-
-<!-- <footer id="footer" class='footer'>© 2025 Dr Manisha's Physiotherapy</footer> -->
+<!-- FOOTER -->
 <footer id="footer"></footer>
-<script src='js/script.js'></script>
 
+<!-- JS -->
+<script src="https://elfsightcdn.com/platform.js" async></script>
+<script src="js/script.js"></script>
+<script>
+  function loadSection(id, file) {
+    fetch(file)
+      .then(res => res.text())
+      .then(html => {
+        document.getElementById(id).innerHTML = html;
+      });
+  }
+
+  /* Load existing pages into sections */
+  loadSection("index", "home.html");
+  loadSection("about", "about.html");
+  loadSection("specialities", "specialities.html");
+    loadSection("testimonials", "testimonials.html"); 
+loadSection("contact", "contact.html");	
+  
+  
+  
+  loadSection("services", "back_neck_pain.html");
+  loadSection("knee_pain", "knee_pain.html");
+  loadSection("shoulder_pain", "shoulder_pain.html");
+	loadSection("joint_artritic_pain", "joint_artritic_pain.html");
+	loadSection("hip_pain", "hip_pain.html");
+	loadSection("foot_ankle_pain", "foot_ankle_pain.html");
+	loadSection("spinal_injuries", "spinal_injuries.html");
+
+	loadSection("bells_palsy", "bells_palsy.html");
+	loadSection("vertigo", "vertigo.html");
+	loadSection("postural_corrections", "postural_corrections.html");
+	loadSection("post_surgery_rehab", "post_surgery_rehab.html");
+	loadSection("sport_injury_managment", "sport_injury_managment.html");
+	loadSection("geriatric_physiotherapy", "geriatric_physiotherapy.html");
+	
+	
+	
+
+	loadSection("gallery", "clinic_gallery.html");
+	
+  loadSection("physio_conditions", "physio_conditions.html");
+  loadSection("weight_management", "weight_management.html");
+  loadSection("wellness_posters", "wellness_posters.html");
+  
+  
+  
+  
+  
+  
+  loadSection("faqs", "faqs.html");
+  loadSection("footer", "footer.html");
+
+  /* Active menu highlight on scroll */
+  const links = document.querySelectorAll('nav a');
+  window.addEventListener('scroll', () => {
+    let fromTop = window.scrollY + 120;
+    links.forEach(link => {
+      const section = document.querySelector(link.getAttribute('href'));
+      if (!section) return;
+      if (section.offsetTop <= fromTop && section.offsetTop + section.offsetHeight > fromTop) {
+        link.classList.add('active');
+      } else {
+        link.classList.remove('active');
+      }
+    });
+  });
+  
+  
+  const params = new URLSearchParams(window.location.search);
+
+if (params.get("submitted") === "true") {
+  const observer = new MutationObserver(() => {
+    const successMsg = document.getElementById("successMsg");
+
+    if (successMsg) {
+      successMsg.style.display = "block";
+      successMsg.scrollIntoView({ behavior: "smooth" });
+      observer.disconnect();
+    }
+  });
+
+  observer.observe(document.body, { childList: true, subtree: true });
+}
+
+  
+
+
+</script>
 
 </body>
 </html>

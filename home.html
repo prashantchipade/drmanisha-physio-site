@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang='en'>
+<head>
+<meta charset='utf-8'><meta name='viewport' content='width=device-width,initial-scale=1'>
+<title>Dr Manisha's Physiotherapy</title>
+<link rel='stylesheet' href='css/style.css'>
+</head>
+<body>
+
+<header id="header">
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-7RN0DTY7KF">
+</script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-7RN0DTY7KF');
+</script>
+</header>
+
+
+
+
+<main class='container'>
+	
+	
+
+
+  <div class='hero-card'>
+    <img src='assets/Banner 1.jpg' alt='clinic image' style='width:100%;height:100%;object-fit:cover;border-radius:12px'>
+  </div>
+<section class='hero2' id='home'>
+
+  <div class='hero-card'>
+    <img src='assets/Ad1.png' alt='clinic image' style='width:100%;height:100%;object-fit:cover;border-radius:12px'>
+  </div>
+
+  <div>
+		<h2>Move better. Hurt less.</h2>
+    <p class='lead'>Evidence-based physiotherapy, hands-on treatment and tailored exercise programs to get you back to what you love.</p>
+    
+	<!-- <div class="desktop-only"> -->
+	
+	<div >
+      
+	  <a class='btn ghost' href='tel:+919881912065' target='_blank' style='margin-left:10px'>Call Clinic</a>
+      <a class='btn ghost' href='https://wa.me/919881912065' target='_blank' style='margin-left:10px'>WhatsApp</a>
+    </div>
+	
+    <div class='services-grid' style='margin-top:28px'>
+      <div class='card'><h3>20+ years of Experience </h3><p class='muted'>Thousands of patients treated with 100% satisfaction.</p></div>
+      <div class='card'><h3>Advanced Protocols</h3><p class='muted'>Photo biomodulation using Class IV Laser - First in Pune.</p></div>
+      <div class='card'><h3>Holistic Approach</h3><p class='muted'>Empowering patients with lifestyle improvement for  overall wellness.</p></div>
+    </div>
+  </div>
+  
+  
+	</div>
+
+  
+  
+</section>
+
+	<div class="hero-tag"  >
+		<p style="text-align:center;" >We just don't treat your Pain.. We empower you for better life ! Your pain-free life starts here !</p>
+	</div>
+  
+<!--
+	<div class='btn ghost'>
+		<h3>We just don't treat your Pain.. We empower you for better life!</h3>	
+	</div>
+	Move better. Hurt less.
+
+-->
+
+</main>
+
+<!-- <footer id="footer" class='footer'>© 2025 Dr Manisha's Physiotherapy</footer> -->
+
+<script>
+	let slideIndex = 0;
+	let slides = document.getElementsByClassName("slide");
+
+	// Show the first slide initially
+	if(slides.length > 0){
+	  slides[0].style.display = "block";
+	}
+
+	function showSlidesAuto() {
+	  for (let i = 0; i < slides.length; i++) {
+		slides[i].style.display = "none";
+	  }
+	  slideIndex++;
+	  if (slideIndex > slides.length) slideIndex = 1;
+	  slides[slideIndex-1].style.display = "block";
+	  setTimeout(showSlidesAuto, 4000); // Change slide every 4 seconds
+	}
+
+	// Start the auto slideshow after DOM is ready
+	window.onload = showSlidesAuto;
+
+
+	
+</script>
+<script src='js/script.js'></script>
+
+
+</body>
+</html>
