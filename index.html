@@ -12,28 +12,6 @@
 </head>
 <body>
 
-<script>
-
-
-
-function scrollToHash() {
-  if (!window.location.hash) return;
-
-  const target = document.querySelector(window.location.hash);
-  if (target) {
-    target.scrollIntoView({ behavior: "smooth" });
-  }
-}
-
-document.addEventListener("DOMContentLoaded", () => {
-  // Try immediately
-  scrollToHash();
-
-  // Retry after dynamic loads
-  setTimeout(scrollToHash, 300);
-  setTimeout(scrollToHash, 800);
-});
-</script>
 
 
 
