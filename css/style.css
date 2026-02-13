@@ -23,7 +23,7 @@ nav a:hover{color:var(--dark);background:#f1fbf6}
 /* Hero */
 .hero{display:grid;grid-template-columns:1fr 480px;gap:28px;align-items:center;padding:48px 0}
 .hero1{display:grid;grid-template-columns:1fr 600px;gap:28px;align-items:center;}
-.hero2{display:grid;grid-template-columns:1fr 520px;gap:28px;align-items:center}
+.hero2{display:grid;grid-template-columns:1fr 520px;gap:28px;align-items:top}
 .kicker{display:inline-block;background:#ecfdf7;color:var(--primary);padding:6px 10px;border-radius:999px;font-weight:700}
 .hero h2{font-size:34px;margin:10px 0 0;line-height:1.02}
 .lead{color:var(--muted);margin-top:12px;font-size:16px}
@@ -390,4 +390,27 @@ html {
   :root {
     --header-height: 150px;
   }
+}
+
+.reviews {
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.review {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.review-btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 20px;
+  background: #4285F4;
+  color: white;
+  border-radius: 5px;
+  text-decoration: none;
 }
