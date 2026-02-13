@@ -15,14 +15,12 @@
     });
 
 //load footer
-
 /*
   fetch("/footer.html")
     .then(response => response.text())
     .then(data => {
       document.getElementById("footer").innerHTML = data;
     });
-
 */
 
 // Mobile menu toggle
@@ -124,8 +122,18 @@ document.querySelectorAll(".faq-question").forEach(btn => {
   });
 });
 
-document.addEventListener("DOMContentLoaded", function () {
 
+// Example dynamic loader
+document.addEventListener("DOMContentLoaded", function () {
+ /*
+  // load header
+  fetch("header.html")
+    .then(res => res.text())
+    .then(data => {
+      document.getElementById("header").innerHTML = data;
+    });
+
+*/
   // load footer
   fetch("footer.html")
     .then(res => res.text())
@@ -141,3 +149,6 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
 });
+
+
+
