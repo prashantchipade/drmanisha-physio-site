@@ -27,6 +27,8 @@
   gtag('js', new Date());
 
   gtag('config', 'G-7RN0DTY7KF');
+  
+  
 </script>
 </header>
 
@@ -71,8 +73,64 @@
       .then(res => res.text())
       .then(html => {
         document.getElementById(id).innerHTML = html;
+		  if (id === "weight_management") {
+			initYoutubeVideo("KNhP9wG9N64");
+			initYoutubeVideo("oOnoIxU4Tu4");
+			initYoutubeVideo("zLVrLN0iZWA");
+			initYoutubeVideo("QFXbzg0e9W4");
+			initYoutubeVideo("JNi_vGZDwnA");
+			initYoutubeVideo("Z98vXrcJtVc");
+			initYoutubeVideo("l5sRCPQPJ4w");
+			initYoutubeVideo("xOOggsLqRhI");
+			initYoutubeVideo("h1PnVfOUPoI");
+			initYoutubeVideo("7rZ8DAW0g8g");
+			initYoutubeVideo("xUngNrqN9W0");
+			initYoutubeVideo("3v6ez_5wHOQ");
+			initYoutubeVideo("FpxoRDDu7Us");
+			initYoutubeVideo("DhKXhgDK1gg");
+			initYoutubeVideo("GFXetd3Ft3U");
+			initYoutubeVideo("8n9ZiCzEyaM");
+		  }		
+		  
+		  if (id === "physio_conditions") {
+			initYoutubeVideo("ztPKVRcyxzA");
+			initYoutubeVideo("FwvOG631pHU");
+			initYoutubeVideo("9spFl5r0kio");
+			initYoutubeVideo("tJrsNJlF3tg");
+			initYoutubeVideo("ivGAegaaOLY");
+			initYoutubeVideo("rPzfoGo-5gQ");
+			initYoutubeVideo("31H1Gjgc1D4");
+			initYoutubeVideo("QJsM0CvEFqE");
+			initYoutubeVideo("arQdhgRtHCs");
+			initYoutubeVideo("OD4fCckF3OU");
+			initYoutubeVideo("YPxiLOgmgBQ");
+			initYoutubeVideo("Swll2OfILow");
+			initYoutubeVideo("Oei7XRbySr8");
+			initYoutubeVideo("NOmalSpDzms");
+			initYoutubeVideo("Acqtjeb6hhw");
+			initYoutubeVideo("ipNeKL1xWnI");
+		  }				  
+		  
       });
   }
+
+function initYoutubeVideo(videoId) {
+  const container = document.getElementById(videoId);
+
+  if (!container) return;
+
+  container.addEventListener("click", function () {
+    container.innerHTML = `
+      <iframe 
+        width="100%" 
+        height="100%"
+        src="https://www.youtube.com/embed/${videoId}?autoplay=1"
+        allow="autoplay; encrypted-media"
+        allowfullscreen>
+      </iframe>
+    `;
+  });
+}
 
   /* Load existing pages into sections */
 	loadSection("index", "home.html");
@@ -94,8 +152,8 @@
 	loadSection("sport_injury_managment", "sport_injury_managment.html");
 	loadSection("geriatric_physiotherapy", "geriatric_physiotherapy.html");
 	loadSection("gallery", "clinic_gallery.html");
-	//loadSection("physio_conditions", "physio_conditions.html");
-	//loadSection("weight_management", "weight_management.html");
+	loadSection("physio_conditions", "physio_conditions.html");
+	loadSection("weight_management", "weight_management.html");
 	loadSection("wellness_posters", "wellness_posters.html");
 	loadSection("faqs", "faqs.html");
 	loadSection("footer1", "footer.html");
