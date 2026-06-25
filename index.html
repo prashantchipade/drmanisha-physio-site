@@ -68,6 +68,10 @@
 
 <script src="js/script.js"></script>
 <script>
+let sectionsLoaded = 0;
+const totalSections = 24;
+
+
   function loadSection(id, file) {
     fetch(file)
       .then(res => res.text())
@@ -110,8 +114,35 @@
 			initYoutubeVideo("Acqtjeb6hhw");
 			initYoutubeVideo("ipNeKL1xWnI");
 		  }				  
-		  
+		  console.log("Loaded section:", id);
+		  sectionsLoaded++;
+		  	if (sectionsLoaded === totalSections) {
+				
+				console.log("All sections loaded");
+				console.log("Current hash:", window.location.hash);
+				
+				if (window.location.hash === "#gallery") {
+
+					const gallery = document.getElementById("gallery");
+
+					if (gallery) {
+
+						setTimeout(() => {
+							console.log("Scrolling to gallery");
+							gallery.scrollIntoView({
+								behavior: "smooth",
+								block: "start"
+							});
+						}, 1500);
+
+					}
+				}
+			}
       });
+	  
+	  
+
+
   }
 
 function initYoutubeVideo(videoId) {
@@ -133,31 +164,32 @@ function initYoutubeVideo(videoId) {
 }
 
   /* Load existing pages into sections */
-	loadSection("index", "home.html");
-	loadSection("about", "about.html");
-	loadSection("specialities", "specialities.html");
-	loadSection("testimonials", "testimonials.html"); 
-	loadSection("contact", "contact.html");	
-	loadSection("services", "back_neck_pain.html");
-	loadSection("knee_pain", "knee_pain.html");
-	loadSection("shoulder_pain", "shoulder_pain.html");
-	loadSection("joint_artritic_pain", "joint_artritic_pain.html");
-	loadSection("hip_pain", "hip_pain.html");
-	loadSection("foot_ankle_pain", "foot_ankle_pain.html");
-	loadSection("spinal_injuries", "spinal_injuries.html");
-	loadSection("bells_palsy", "bells_palsy.html");
-	loadSection("vertigo", "vertigo.html");
-	loadSection("postural_corrections", "postural_corrections.html");
-	loadSection("post_surgery_rehab", "post_surgery_rehab.html");
-	loadSection("sport_injury_managment", "sport_injury_managment.html");
-	loadSection("geriatric_physiotherapy", "geriatric_physiotherapy.html");
-	loadSection("gallery", "clinic_gallery.html");
-	loadSection("physio_conditions", "physio_conditions.html");
-	loadSection("weight_management", "weight_management.html");
-	loadSection("wellness_posters", "wellness_posters.html");
-	loadSection("faqs", "faqs.html");
-	loadSection("footer1", "footer.html");
-
+	
+		loadSection("index", "home.html");
+		loadSection("about", "about.html");
+		loadSection("specialities", "specialities.html");
+		loadSection("testimonials", "testimonials.html"); 
+		loadSection("contact", "contact.html");	
+		loadSection("services", "back_neck_pain.html");
+		loadSection("knee_pain", "knee_pain.html");
+		loadSection("shoulder_pain", "shoulder_pain.html");
+		loadSection("joint_artritic_pain", "joint_artritic_pain.html");
+		loadSection("hip_pain", "hip_pain.html");
+		loadSection("foot_ankle_pain", "foot_ankle_pain.html");
+		loadSection("spinal_injuries", "spinal_injuries.html");
+		loadSection("bells_palsy", "bells_palsy.html");
+		loadSection("vertigo", "vertigo.html");
+		loadSection("postural_corrections", "postural_corrections.html");
+		loadSection("post_surgery_rehab", "post_surgery_rehab.html");
+		loadSection("sport_injury_managment", "sport_injury_managment.html");
+		loadSection("geriatric_physiotherapy", "geriatric_physiotherapy.html");
+		loadSection("gallery", "clinic_gallery.html");
+		loadSection("physio_conditions", "physio_conditions.html");
+		loadSection("weight_management", "weight_management.html");
+		loadSection("wellness_posters", "wellness_posters.html");
+		loadSection("faqs", "faqs.html");
+		loadSection("footer1", "footer.html");
+		
   /* Active menu highlight on scroll */
   const links = document.querySelectorAll('nav a');
   window.addEventListener('scroll', () => {
