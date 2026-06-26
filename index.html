@@ -137,6 +137,25 @@ const totalSections = 24;
 
 					}
 				}
+				
+				
+				if (window.location.hash === "#physio_conditions") {
+
+					const physio_conditions = document.getElementById("physio_conditions");
+
+					if (physio_conditions) {
+
+						setTimeout(() => {
+							console.log("Scrolling to physio_conditions");
+							physio_conditions.scrollIntoView({
+								behavior: "smooth",
+								block: "start"
+							});
+						}, 1500);
+
+					}
+				}
+				
 			}
       });
 	  
