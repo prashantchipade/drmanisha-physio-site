@@ -97,6 +97,9 @@ const totalSections = 24;
 		  }		
 		  
 		  if (id === "physio_conditions") {
+		  
+			initYoutubeVideo("4YUSZcRM1NA");
+			initYoutubeVideo("IJ-f0Q4qE5Q");
 			initYoutubeVideo("ztPKVRcyxzA");
 			initYoutubeVideo("FwvOG631pHU");
 			initYoutubeVideo("9spFl5r0kio");
@@ -170,6 +173,14 @@ function initYoutubeVideo(videoId) {
   if (!container) return;
 
   container.addEventListener("click", function () {
+
+    const title = container.dataset.title || videoId;
+
+    gtag('event', 'video_play', {
+      video_id: videoId,
+      video_title: title
+    });
+	
     container.innerHTML = `
       <iframe 
         width="100%" 
