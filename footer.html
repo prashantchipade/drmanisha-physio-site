@@ -1,3 +1,5 @@
+
+
 <footer class="footer-sitemap">
   <div class="footer-container">
     
@@ -70,7 +72,11 @@
 		<h4>Clinic Details</h4>
 		<ul>
 		<li>F16, Destination Center, Magarpatta City, Hadapsar, Pune – 411028</li>
-		<li><p style='margin-top:8px'><strong>Phone:</strong> <a href='tel:+919881912065'>+91 9881912065</a> <a class='btn ghost' href='https://wa.me/919881912065' target='_blank' style='margin-left:10px'>WhatsApp</a></p>
+		<li><p style='margin-top:8px'><strong>Phone:</strong> 
+		
+		<a href='tel:+919881912065' onclick="trackEvent('call_click','footer')" >+91 9881912065</a> 
+		<a class='btn ghost' href='https://wa.me/919881912065' target='_blank' style='margin-left:10px' onclick="trackEvent('whatsapp_click','footer')" >WhatsApp</a></p>
+		
 		<p style='margin-top:8px'><strong>Email:</strong> manishachipade@gmail.com </li>
 		
 		
@@ -81,7 +87,9 @@
 			<div style="text-align:center; margin-top:10px;">
 				<a href="https://www.google.com/maps/dir/?api=1&destination=Dr.+Manisha's+Physiotherapy+-+Advanced+Laser+Center"
 				   target="_blank" 
-				   style="font-size:13px;display:inline-block; padding:8px 16px;  background-color:#4CAF50; color:white;  text-decoration:none; border-radius:6px;">
+				   style="font-size:13px;display:inline-block; padding:8px 16px;  background-color:#4CAF50; color:white;  text-decoration:none; border-radius:6px;"
+				   onclick="trackEvent('getdirection_click','footer')"
+				   >
 					Get Directions
 				</a>
 			</div>
@@ -123,6 +131,8 @@
     target="_blank"
     rel="noopener"
     aria-label="Chat on WhatsApp"
+	onclick="trackEvent('whatsapp_click','floating_button')"
+	
   >
     <!-- WhatsApp SVG -->
     <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -133,8 +143,9 @@
   <!-- Call floating icon -->
   <a
     class="floating-call"
-    href="tel:+91988912065"
+    href="tel:+919881912065"
     aria-label="Call Clinic"
+	onclick="trackEvent('phone_click','floating_button')"
   >
     <!-- Phone SVG -->
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
@@ -147,6 +158,7 @@
     class="floating-google"
     href="https://g.page/Dr_Manisha_Physiotherapy"
     aria-label="Explore on Google"
+	onclick="trackEvent('google_click','floating_button')"
   >
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="24" height="24">
   <path fill="#4285F4" d="M24 9.5c3.54 0 6 1.54 7.38 2.84l5.44-5.44C33.64 4.4 29.27 2 24 2 14.82 2 7.22 7.88 4.42 16.01l6.91 5.36C12.61 14.54 17.84 9.5 24 9.5z"/>
@@ -156,12 +168,12 @@
 </svg>
 </a>
     <!-- Book Appointment button -->
-  <a id="floatingBook" href="#contact" class="floating-book" >
+  <a id="floatingBook" href="#contact" class="floating-book" onclick="trackEvent('bookappointment_click','floating_button')" >
     Book Appointment
   </a>
 
   
-  <div ><a style="font-size:13px;display:inline-block; padding:8px 16px; background-color:#4CAF50; color:#fff; text-decoration:none; border-radius:6px;" href="#testimonials">What Sets Us Apart - Trusted Ethical Care !</a></div>
+  <div ><a style="font-size:13px;display:inline-block; padding:8px 16px; background-color:#4CAF50; color:#fff; text-decoration:none; border-radius:6px;" href="#testimonials" onclick="trackEvent('testimonials_click','floating_button')"  >What Sets Us Apart - Trusted Ethical Care !</a></div>
 </div>
 
 

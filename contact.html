@@ -77,7 +77,7 @@
       <textarea name="message"></textarea><br><br>
 
       <button type="submit" class='btn ghost' 
-        style="display:inline-block; padding:10px 20px; background-color:#4CAF50; color:white; text-decoration:none; border-radius:6px;">
+        style="display:inline-block; padding:10px 20px; background-color:#4CAF50; color:white; text-decoration:none; border-radius:6px;" onclick="trackEvent('formsubmit_click','contacts')">
         Submit
       </button>
     </form>
@@ -92,8 +92,8 @@
     <h4>Clinic Address</h4>
     <p>F16, Destination Center, Above Punjabi Rasoi, Magarpatta City, Hadapsar, Pune – 411028</p>
     <p style='margin-top:8px'>
-      <strong>Phone:</strong> <a href='tel:+919881912065'>+91 9881912065</a> 
-      <a class='btn ghost' href='https://wa.me/919881912065' target='_blank' style='margin-left:10px'>WhatsApp</a>
+      <strong>Phone:</strong> <a href='tel:+919881912065' onclick="trackEvent('call_click','contacts')" >+91 9881912065</a> 
+      <a class='btn ghost' href='https://wa.me/919881912065' target='_blank' style='margin-left:10px' onclick="trackEvent('whatsapp_click','contacts')">WhatsApp</a>
     </p>
     <p style='margin-top:8px'><strong>Email:</strong> manishachipade@gmail.com</p>
     <div class='contact-map' style='margin-top:12px'>
@@ -103,7 +103,7 @@
       <div style="margin-left:13px;margin-top:10px;">
         <a href="https://www.google.com/maps/dir/?api=1&destination=Dr.+Manisha's+Physiotherapy+-+Advanced+Laser+Center"
            target="_blank" class='btn ghost'
-           style="font-size:13px;display:inline-block; padding:8px 16px; background-color:#4CAF50; color:white; text-decoration:none; border-radius:6px;">
+           style="font-size:13px;display:inline-block; padding:8px 16px; background-color:#4CAF50; color:white; text-decoration:none; border-radius:6px;" onclick="trackEvent('getDirection_click','contacts')">
           Get Directions
         </a>
       </div>

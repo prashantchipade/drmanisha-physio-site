@@ -68,6 +68,9 @@
 
 <script src="js/script.js"></script>
 <script>
+console.log("Immediately:", window.location.href);
+console.log("Immediately hash:", window.location.hash);
+
 let sectionsLoaded = 0;
 const totalSections = 24;
 
@@ -123,10 +126,15 @@ const totalSections = 24;
 		}	
 		  console.log("Loaded section:", id);
 		  sectionsLoaded++;
-		  	if (sectionsLoaded === totalSections) {
+		  console.log("Hash after loading", id, ":", window.location.hash);
+		  console.log("sectionsLoaded :", sectionsLoaded);
+		  
+		  if (sectionsLoaded === totalSections) {
 				
 				console.log("All sections loaded");
-				console.log("Current hash:", window.location.hash);
+				
+				console.log("Current href:", window.location.href);
+				console.log("Current hash:", window.location.hash);				
 				
 				if (window.location.hash === "#gallery") {
 
@@ -163,12 +171,12 @@ const totalSections = 24;
 					}
 				}
 				
+				
+				
 			}
       });
 	  
-	  
-
-
+		  
   }
 
 function initYoutubeVideo(videoId) {
