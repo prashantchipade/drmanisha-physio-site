@@ -388,7 +388,7 @@ html {
 
 @media (max-width: 768px) {
   :root {
-    --header-height: 150px;
+    --header-height: 100px;
   }
 }
 
@@ -456,4 +456,98 @@ html {
   border-style: solid;
   border-width: 13px 0 13px 20px;
   border-color: transparent transparent transparent white;
+}
+
+.floating-btn svg {
+    width: 26px;
+    height: 26px;
+}
+
+
+
+.google-rating-card{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+
+    width:90%;
+    max-width:400px;
+    margin:16px auto;
+
+    padding:16px 18px;
+
+    text-decoration:none;
+    color:#222;
+
+    background:linear-gradient(180deg,#FFFDF5 0%,#FFFFFF 100%);
+
+    border:1px solid rgba(244,180,0,.28);
+
+    border-radius:18px;
+
+    box-shadow:
+        0 6px 18px rgba(0,0,0,.08),
+        0 2px 8px rgba(244,180,0,.12);
+
+    transition:.25s ease;
+}
+
+.google-rating-card:hover{
+    transform:translateY(-3px);
+    box-shadow:
+        0 10px 24px rgba(0,0,0,.12),
+        0 4px 14px rgba(244,180,0,.18);
+}
+
+.google-rating-stars{
+    font-size:22px;
+    letter-spacing:2px;
+    margin-bottom:6px;
+}
+
+.google-rating-text{
+    display:flex;
+    align-items:center;
+    gap:8px;
+    margin-bottom:8px;
+}
+
+.rating-number{
+    font-size:20px;
+    font-weight:800;
+    color:#202124;
+    line-height:1;
+}
+
+.rating-label{
+    font-size:20px;
+    font-weight:700;
+    color:#202124;
+}
+
+.google-review-count{
+    font-size:15px;
+    color:#5f6368;
+    margin-bottom:12px;
+}
+
+.google-review-count strong{
+    color:#202124;
+}
+
+.visit-google{
+    display:inline-flex;
+    align-items:center;
+    gap:6px;
+
+    padding:7px 16px;
+
+    border-radius:999px;
+
+    background:#4285F4;
+    color:#fff;
+
+    font-weight:600;
+    font-size:15px;
 }
