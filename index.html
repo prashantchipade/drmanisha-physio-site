@@ -81,6 +81,9 @@ const totalSections = 24;
       .then(res => res.text())
       .then(html => {
         document.getElementById(id).innerHTML = html;
+		if (id === "contact") {
+			initializeContactForm();
+		}
 		  if (id === "weight_management") {
 			initYoutubeVideo("KNhP9wG9N64");
 			initYoutubeVideo("oOnoIxU4Tu4");
