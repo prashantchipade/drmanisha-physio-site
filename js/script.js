@@ -144,7 +144,93 @@ function trackEvent(eventName, location) {
 
 
 
+function initializeContactForm() {
 
+		console.log("DOM Loaded");
+	  const form = document.getElementById("enquiryForm");
+	  console.log(form);
+	  const dateField = document.getElementById("apptDate");
+	  const timeField = document.getElementById("apptTime");
+	  const mobileField = document.getElementById("mobile");
+	  
+	  const dateError = document.getElementById("dateError");
+	  const timeError = document.getElementById("timeError");
+	  const mobileError = document.getElementById("mobileError");
 
+	  // Set min date = today
+	  const today = new Date().toISOString().split("T")[0];
+	  dateField.setAttribute("min", today);
+
+	  // Custom holidays
+	  const offDays = ["2025-09-15", "2025-09-20"];
+	  //const offDays = ["2099-01-01"];
+
+	  form.addEventListener("submit", function(e) {
+		console.log("Submit event fired");
+		let valid = true;
+		dateError.style.display = "none";
+		timeError.style.display = "none";
+		mobileError.style.display = "none";
+
+		const selectedDate = new Date(dateField.value);
+		const selectedTime = timeField.value;
+		const mobile = mobileField.value.trim();
+
+		// ---- Date validation ----
+		if (!dateField.value) {
+		  dateError.textContent = "❌ Please select a date.";
+		  dateError.style.display = "block";
+		  valid = false;
+		} else {
+		  const yyyy_mm_dd = dateField.value;
+
+		  // Check Sunday
+		  if (selectedDate.getDay() === 0) {
+			dateError.textContent = "❌ Clinic is closed on Sundays.";
+			dateError.style.display = "block";
+			valid = false;
+		  }
+
+		  // Check custom off-days
+		  if (offDays.includes(yyyy_mm_dd)) {
+			dateError.textContent = "❌ Clinic is closed on this date.";
+			dateError.style.display = "block";
+			valid = false;
+		  }
+		}
+
+		// ---- Time validation ----
+		const morningStart = "10:30";
+		const morningEnd   = "12:30";
+		const eveningStart = "17:30";
+		const eveningEnd   = "19:30";
+
+		if (
+		  !(
+			(selectedTime >= morningStart && selectedTime <= morningEnd) ||
+			(selectedTime >= eveningStart && selectedTime <= eveningEnd)
+		  )
+		) {
+		  timeError.textContent = "❌ Please select a valid slot: 10:30–12:30 or 17:30–19:30.";
+		  timeError.style.display = "block";
+		  valid = false;
+		}
+
+		// ---- Mobile validation ----
+		if (!/^\d{10}$/.test(mobile)) {
+		  mobileError.textContent = "❌ Please enter a valid 10-digit mobile number.";
+		  mobileError.style.display = "block";
+		  valid = false;
+		}
+		
+		if (!valid) e.preventDefault();
+	  });
+
+	  // Success message handling
+	  if (window.location.search.includes("submitted=true")) {
+		form.style.display = "none";
+		document.getElementById("successMsg").style.display = "block";
+	  }
+}
 
 
